@@ -18,7 +18,7 @@ exports.newGame = function() {
     return Promise.delay(THROTTLE_DELAY)
     .then(function() {
       if (result) {
-        return result['token'];
+        return result;
       }
     })
   })

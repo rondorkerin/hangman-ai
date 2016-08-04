@@ -41,8 +41,8 @@ exports.play = function(token, hangman, numFailures, guesses, dict) {
 exports.init = function() {
   debugger;
   return HangmanAPI.newGame()
-  .then(function(token) {
-    return exports.play(token, '', 0, [], masterDictionary);
+  .then(function(response) {
+    return exports.play(response['token'], response['hangman'], 0, [], masterDictionary);
   })
 }
 
