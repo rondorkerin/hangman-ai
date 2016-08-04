@@ -3,7 +3,7 @@ var request = require('request-promise');
 
 var BASE_URL = 'http://hangman-api.herokuapp.com';
 
-var MAX_FAILURES = 5;
+var MAX_FAILURES = 10;
 
 var THROTTLE_DELAY = 2500;
 
@@ -34,7 +34,6 @@ exports.guessLetter = function(token, letter) {
       letter: letter
     }
   }
-  debugger;
 
   return request(options)
   .then(function(result) {
